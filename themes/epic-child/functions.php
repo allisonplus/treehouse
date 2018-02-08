@@ -27,15 +27,3 @@ function sds_enqueue_styles() {
 	wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
 }
 
-/**
- * Enqueue flickity scripts.
- */
-function sds_scripts_method() {
-	// Slider.
-	wp_enqueue_style( 'sds-carousel-style', 'https://unpkg.com/flickity@2/dist/flickity.min.css' );
-	wp_enqueue_script( 'sds-carousel-js', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', array( 'jquery' ) );
-	wp_enqueue_script( 'custom-flickity', get_stylesheet_directory_uri() . '/includes/flickity.js' );
-
-}
-add_action( 'wp_enqueue_scripts', 'sds_scripts_method' );
-
