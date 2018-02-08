@@ -299,6 +299,11 @@ article.content ul li, article.full-width-content ul li,
 	padding-left: 0;
 }
 
+.homepage-focus-img {
+	background-position: cover;
+	background-repeat: no-repeat;
+}
+
 // Portfolio Pieces.
 .portfolio-pieces {
 
@@ -308,14 +313,41 @@ article.content ul li, article.full-width-content ul li,
 	} // li
 } // .portfolio-pieces
 
-// Homepage.
-.slide-single {
+.front-page-content .content,
+.single-portfolio .content {
+	border-right: none;
 	width: 100%;
 }
 
-.front-page-content .content {
-	border-right: none;
-	width: 100%;
+.single-portfolio {
+
+	.content {
+		padding: 0;
+	}
+
+	.type-portfolio {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.content-wrap,
+	.content-img-wrap {
+		max-width: 50%;
+	}
+
+	.content-img-wrap {
+		width: 100%;
+
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	.post-image img {
+		box-shadow: none;
+		margin-top: 0;
+	}
 }
 
 // Homepage : Supplementary Section.

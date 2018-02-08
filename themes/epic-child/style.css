@@ -250,16 +250,39 @@ article.content ul li, article.full-width-content ul li,
 .primary-nav {
   padding-left: 0; }
 
+.homepage-focus-img {
+  background-position: cover;
+  background-repeat: no-repeat; }
+
 .portfolio-pieces li {
   display: inline-block;
   float: none; }
 
-.slide-single {
-  width: 100%; }
-
-.front-page-content .content {
+.front-page-content .content,
+.single-portfolio .content {
   border-right: none;
   width: 100%; }
+
+.single-portfolio .content {
+  padding: 0; }
+
+.single-portfolio .type-portfolio {
+  display: flex;
+  justify-content: space-between; }
+
+.single-portfolio .content-wrap,
+.single-portfolio .content-img-wrap {
+  max-width: 50%; }
+
+.single-portfolio .content-img-wrap {
+  width: 100%; }
+  .single-portfolio .content-img-wrap ul {
+    margin: 0;
+    padding: 0; }
+
+.single-portfolio .post-image img {
+  box-shadow: none;
+  margin-top: 0; }
 
 .supplementary-gallery {
   display: flex;

@@ -13,8 +13,6 @@ get_header(); ?>
 			<?php get_template_part( 'loop', 'single' ); // Loop. ?>
 
 		</article>
-
-		<?php get_sidebar(); ?>
 	</section>
 
 <?php get_footer(); ?>
