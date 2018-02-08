@@ -1,0 +1,403 @@
+/*
+ Theme Name:   Epic Child
+ Theme URI:    http://example.com/twenty-fifteen-child/
+ Description:  Child Theme for Epic (already customized without a child theme)
+ Author:       Allison Tarr
+ Author URI:   http://allisontarr.com
+ Template:     epic
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         two-columns, right-sidebar, responsive-layout,
+ Text Domain:  epic-child
+*/
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+/*Overwrites exisiting theme styles*/
+.child-custom article.content ul {
+	margin-left: 0;
+	padding: 0;
+}
+
+html,body, div, dl, dt, dd, ul, li, pre, form, fieldset, input, textarea, blockquote, th, td, section {
+	font-size: 14px;
+}
+
+$aqua: #00EEEE;
+$deep-aqua: #009999;
+$grey: #555;
+
+a:hover {
+	color: $aqua;
+	text-decoration: none;
+}
+
+p {
+	line-height: 2.2em;
+}
+
+.cols-1 article.content {
+	width: 90%;
+}
+
+.cols-3 article.content {
+	width: 50%;
+}
+
+.cols-3 aside.sidebar, .cols-3 aside.secondary-sidebar {
+	width: 25%;
+}
+
+.cols-3-m article.content,
+.cols-3-r article.content {
+	border-left: 1px solid $grey;
+}
+
+.wp-caption, .gallery-caption {
+	border: 1px solid $grey;
+}
+
+.slogan {
+	color: $grey;
+	display: block;
+}
+
+section.logo-box {
+	padding: 0;
+}
+
+header #title a {
+	display: block;
+}
+
+header h1 a,
+header .header-call-to-action .widget a {
+	color: $deep-aqua;
+}
+
+header .header-call-to-action .widget {
+	background-color: $deep-aqua;
+}
+
+header .header-call-to-action .widget_search {
+	color: #00cccc;
+}
+
+nav ul.top-nav {
+	border-bottom: 1px solid $grey;
+
+	li a {
+		color: $grey;
+	}
+}
+
+#searchform input {
+	color: #fff;
+	background-color: #fff;
+	border-color: $grey;
+}
+
+nav .primary-nav {
+	border-bottom: 1px solid #FFFF00;
+	border-top: 1px solid #FFFF00;
+	margin-bottom: 60px;
+	margin-top: 0;
+
+	li {
+		font-family: 'Open Sans', sans-serif;
+
+		&:not(:last-of-type) {
+			margin-right: 24px;
+		}
+
+		a {
+			color: $deep-aqua;
+			padding: 8px 30px;
+		}
+
+		a:hover {
+			background-color: $aqua;
+		}
+	}
+} // nav .primary-nav
+
+nav .primary-nav li ul.sub-menu li a:hover,
+.primary-nav-container li ul.children li a:hover {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+	color: $grey;
+	display: block;
+	float: none;
+	margin-bottom: -1px;
+	min-width: 12em;
+	padding: 15px 25px;
+	white-space: nowrap;
+	width: auto;
+}
+
+article.content {
+	padding-left: 1.5%;
+	width: 60%;
+}
+
+h1 {
+	color: $grey;
+	font-weight: 200;
+	text-decoration: none;
+}
+
+h1.page-title a,
+article.content h2, article.full-width-content h2,
+article.content h3, article.full-width-content h3,
+article.content h4, article.full-width-content h4,
+article.content h5, article.full-width-content h5 {
+	color: $aqua;
+}
+
+article.content blockquote, article.full-width-content blockquote {
+	font-size: 15px;
+}
+
+article.content ul, article.full-width-content ul {
+	color: $deep-aqua;
+}
+
+article.content ol > li {
+	line-height: 2.2em;
+}
+
+article.content blockquote, .comment-content blockquote {
+	margin-bottom: 10px;
+	margin-left: 1em;
+	padding: .5em;
+	width: 80%;
+}
+
+article.content h1,
+article.full-width-content h1,
+h1.page-title {
+	color: $grey;
+	font-size: 32px;
+	text-decoration: none;
+}
+
+/*   -------------
+Blog
+-------------  */
+
+section.latest-post {
+	width: 95%;
+}
+
+.search section.latest-post.page {
+	border-color: rgba(0, 0, 0, .5);
+}
+
+p a.button,
+.latest-post a.button,
+article.content a.more-link,
+article.content a.post-edit-link,
+article.content .previous-posts a,
+article.content .next-posts a,
+article.content a.comment-reply-link,
+article.content .comment-navigation a,
+article.full-width-content a.post-edit-link,
+article.full-width-content .previous-posts a,
+article.full-width-content .next-posts a,
+article.full-width-content a.comment-reply-link,
+article.full-width-content .comment-navigation a,
+a#cancel-comment-reply-link,
+#respond input[type="submit"],
+.gform_wrapper .gform_footer input.button,
+.gform_wrapper .gform_footer input[type=submit],
+.button {
+	background-color: $deep-aqua;
+
+	&:hover {
+		background-color: $aqua;
+	}
+}
+
+p.latest-post-date {
+	color: #bbbbbb;
+}
+
+section.latest-post h2.latest-post-title {
+	color: $deep-aqua;
+}
+
+section.latest-post h2 a {
+	font-weight: 400;
+}
+
+section.latest-post h2 a:hover {
+	text-decoration: underline;
+}
+
+#post-author {
+	display: none;
+}
+
+/*   -------------
+Sidebar
+-------------  */
+aside.sidebar {
+	width: 30%;
+}
+
+/*   -------------
+Footer
+-------------  */
+.copyright {
+	font-size: 9px;
+
+	a {
+		color: #bab9b9;
+	}
+}
+
+.mc-gravity-confirmation, .mc_gravity-confirmation, .mc-newsletter-confirmation, .mc_newsletter-confirmation {
+	width: 98%;
+}
+
+@media (max-width: 520px) {
+
+	#masthead .site-branding {
+		background-size: 200% auto;
+	}
+}
+
+header li.current-menu-item a {
+	background-color: $aqua;
+	color: #fff;
+}
+
+header nav {
+	margin-bottom: 0;
+}
+
+article.content ul li, article.full-width-content ul li,
+.child-custom article.content ul > li {
+	list-style-type: none;
+}
+
+/*Primary Navigation */
+.primary-nav {
+	padding-left: 0;
+}
+
+/* Portfolio Pieces*/
+.portfolio-pieces {
+
+	li {
+		display: inline-block;
+		float: none;
+	} // li
+} // .portfolio-pieces
+
+/*Homepage*/
+.slide-single {
+	width: 100%;
+}
+
+/*Homepage : Supplementary Section*/
+.supplementary-gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 60px 0 30px;
+
+	li {
+		flex-basis: 200px;
+		text-align: center;
+	}
+
+	.supplementary-single {
+		a {
+			display: block;
+		}
+	}
+}
+
+// Portfolio Archive Page
+.post-type-archive-portfolio {
+
+	// Make it full width (nix sidebar).
+	.content {
+		display: grid;
+		grid-gap: 16px;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	.portfolio-single {
+		font-size: 0;
+		text-align: center;
+		position: relative;
+
+		&:hover {
+
+			.latest-post-title {
+				opacity: 0.5;
+			}
+		} // &:hover
+
+		.latest-post-title {
+			background-color: #00a8f0;
+			bottom: 0;
+			color: #ffffff;
+			font-size: 20px;
+			left: 0;
+			margin: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			opacity: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+			transition: opacity 0.25s ease-in-out;
+		}
+	} // .portfolio-single
+
+	.portfolio-single-link {
+		display: block;
+		font-size: 0;
+	}
+
+	.wp-post-image {
+		margin-bottom: 0;
+	}
+} // .post-type-archive-portfolio
+
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #eee;
+	clip: auto !important;
+	clip-path: none;
+	color: #444;
+	display: block;
+	font-size: 1em;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
