@@ -40,14 +40,16 @@ p {
 .cols-3 article.content {
   width: 50%; }
 
-.cols-3 aside.sidebar, .cols-3 aside.secondary-sidebar {
+.cols-3 aside.sidebar,
+.cols-3 aside.secondary-sidebar {
   width: 25%; }
 
 .cols-3-m article.content,
 .cols-3-r article.content {
   border-left: 1px solid #555; }
 
-.wp-caption, .gallery-caption {
+.wp-caption,
+.gallery-caption {
   border: 1px solid #555; }
 
 .slogan {
@@ -76,22 +78,29 @@ nav ul.top-nav {
     color: #555; }
 
 #searchform input {
-  color: #fff;
   background-color: #fff;
-  border-color: #555; }
+  border-color: #555;
+  color: #fff; }
 
 nav .primary-nav {
-  border-bottom: 1px solid #FFFF00;
-  border-top: 1px solid #FFFF00;
-  margin-bottom: 60px;
+  border-bottom: none;
+  border-top: none;
+  color: #fff;
   margin-top: 0; }
+  @media only screen and (min-width: 760px) {
+    nav .primary-nav {
+      margin-bottom: 30px; } }
   nav .primary-nav li {
-    font-family: 'Open Sans', sans-serif; }
+    font-family: "Open Sans", sans-serif; }
     nav .primary-nav li:not(:last-of-type) {
-      margin-right: 24px; }
+      margin-right: 16px; }
     nav .primary-nav li a {
-      color: #009999;
-      padding: 8px 30px; }
+      color: #fff;
+      padding: 8px 25px;
+      width: initial; }
+      @media only screen and (min-width: 640px) {
+        nav .primary-nav li a {
+          color: #009999; } }
     nav .primary-nav li a:hover {
       background-color: #00EEEE; }
 
@@ -117,25 +126,32 @@ h1 {
   text-decoration: none; }
 
 h1.page-title a,
-article.content h2, article.full-width-content h2,
-article.content h3, article.full-width-content h3,
-article.content h4, article.full-width-content h4,
-article.content h5, article.full-width-content h5 {
+article.content h2,
+article.full-width-content h2,
+article.content h3,
+article.full-width-content h3,
+article.content h4,
+article.full-width-content h4,
+article.content h5,
+article.full-width-content h5 {
   color: #00EEEE; }
 
-article.content blockquote, article.full-width-content blockquote {
+article.content blockquote,
+article.full-width-content blockquote {
   font-size: 15px; }
 
-article.content ul, article.full-width-content ul {
+article.content ul,
+article.full-width-content ul {
   color: #009999; }
 
 article.content ol > li {
   line-height: 2.2em; }
 
-article.content blockquote, .comment-content blockquote {
+article.content blockquote,
+.comment-content blockquote {
   margin-bottom: 10px;
   margin-left: 1em;
-  padding: .5em;
+  padding: 0.5em;
   width: 80%; }
 
 article.content h1,
@@ -145,9 +161,6 @@ h1.page-title {
   font-size: 32px;
   text-decoration: none; }
 
-/*   -------------
-Blog
--------------  */
 section.latest-post {
   width: 95%; }
 
@@ -208,15 +221,9 @@ section.latest-post h2 a:hover {
 #post-author {
   display: none; }
 
-/*   -------------
-Sidebar
--------------  */
 aside.sidebar {
   width: 30%; }
 
-/*   -------------
-Footer
--------------  */
 .copyright {
   font-size: 9px; }
   .copyright a {
@@ -240,20 +247,20 @@ article.content ul li, article.full-width-content ul li,
 .child-custom article.content ul > li {
   list-style-type: none; }
 
-/*Primary Navigation */
 .primary-nav {
   padding-left: 0; }
 
-/* Portfolio Pieces*/
 .portfolio-pieces li {
   display: inline-block;
   float: none; }
 
-/*Homepage*/
 .slide-single {
   width: 100%; }
 
-/*Homepage : Supplementary Section*/
+.front-page-content .content {
+  border-right: none;
+  width: 100%; }
+
 .supplementary-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -272,20 +279,20 @@ article.content ul li, article.full-width-content ul li,
 
 .post-type-archive-portfolio .portfolio-single {
   font-size: 0;
-  text-align: center;
-  position: relative; }
+  position: relative;
+  text-align: center; }
   .post-type-archive-portfolio .portfolio-single:hover .latest-post-title {
     opacity: 0.5; }
   .post-type-archive-portfolio .portfolio-single .latest-post-title {
+    align-items: center;
     background-color: #00a8f0;
     bottom: 0;
-    color: #ffffff;
+    color: #fff;
+    display: flex;
     font-size: 20px;
+    justify-content: center;
     left: 0;
     margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     opacity: 0;
     position: absolute;
     right: 0;
@@ -299,7 +306,6 @@ article.content ul li, article.full-width-content ul li,
 .post-type-archive-portfolio .wp-post-image {
   margin-bottom: 0; }
 
-/* Text meant only for screen readers. */
 .screen-reader-text {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -310,8 +316,7 @@ article.content ul li, article.full-width-content ul li,
   padding: 0;
   position: absolute !important;
   width: 1px;
-  word-wrap: normal !important;
-  /* Many screen reader and browser combinations announce broken words as they would appear visually. */ }
+  word-wrap: normal !important; }
 
 .screen-reader-text:focus {
   background-color: #eee;
@@ -327,5 +332,8 @@ article.content ul li, article.full-width-content ul li,
   text-decoration: none;
   top: 5px;
   width: auto;
-  z-index: 100000;
-  /* Above WP toolbar. */ }
+  z-index: 100000; }
+
+footer#footer {
+  border: none;
+  text-align: center; }
