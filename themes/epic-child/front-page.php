@@ -15,11 +15,9 @@ get_header(); ?>
 		<section class="child-custom content-wrapper front-page-content front-page cf">
 
 			<article class="content">
-				<?php echo treehouse_homepage_slider(); // WPCS: XSS ok. ?>
 				<?php echo treehouse_supplementary_section(); // WPCS: XSS ok. ?>
 			</article>
 
-			<?php get_sidebar(); ?>
 		</section>
 	</main>
 
