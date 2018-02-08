@@ -64,33 +64,22 @@ function treehouse_portfolio_gallery() {
 /**
  * Homepage slider.
  */
-function treehouse_homepage_slider() {
+function treehouse_homepage_focus() {
 
-	$images = get_field( 'main_image' );
+	$image = get_field( 'main_image' );
 
 	// Stop if there's nothing to display.
-	if ( ! $images ) {
-		// return false;
+	if ( ! $image ) {
+		return false;
 	}
 
 	ob_start(); ?>
 
-	<section class="homepage-slider">
-
-	<?php if ( $images ) : ?>
-		<ul class="home-image-gallery">
-		<?php foreach ( $images as $image ) : ?>
-			<li class="slide-single">
-				<a href="<?php echo esc_url( $image['url'] ); ?>">
-					<img src="<?php echo esc_url( $image['sizes']['medium_large'] ); ?>" alt="<?php echo esc_html( $image['alt'] ); ?>" />
-				</a>
-				<p><?php echo esc_attr( $image['caption'] ); ?></p>
-			</li>
-		<?php endforeach; ?>
-		</ul>
-	<?php endif; ?>
-
-	</section><!--.homepage-slider-->
+	<section class="homepage-focus-img">
+		<a href="<?php echo esc_url( $image['url'] ); ?>">
+			<img src="<?php echo esc_url( $image['sizes']['medium_large'] ); ?>" alt="<?php echo esc_html( $image['alt'] ); ?>" />
+		</a>
+	</section><!--.homepage-focus-img-->
 
 	<?php
 	return ob_get_clean();
