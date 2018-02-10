@@ -27,7 +27,7 @@ function treehouse_portfolio_gallery() {
 
 	// Stop if there's nothing to display.
 	if ( ! $images ) {
-		// return false;
+		return false;
 	}
 
 	ob_start(); ?>
@@ -73,11 +73,15 @@ function treehouse_homepage_focus() {
 		return false;
 	}
 
+	if ( ! $image['alt'] ) {
+		$img_alt = '';
+	}
+
 	ob_start(); ?>
 
 	<section class="homepage-focus-img">
 		<a href="<?php echo esc_url( $image['url'] ); ?>">
-			<img src="<?php echo esc_url( $image['sizes']['medium_large'] ); ?>" alt="<?php echo esc_html( $image['alt'] ); ?>" />
+			<img src="<?php echo esc_url( $image['sizes']['homepage-heroine'] ); ?>" alt="<?php echo esc_html( $img_alt ); ?>" />
 		</a>
 	</section><!--.homepage-focus-img-->
 
@@ -95,7 +99,7 @@ function treehouse_supplementary_section() {
 
 	// Stop if there's nothing to display.
 	if ( ! $modules ) {
-		// return false;
+		return false;
 	}
 
 	ob_start(); ?>
@@ -122,10 +126,9 @@ function treehouse_supplementary_section() {
 					<img src="<?php echo esc_url( $image['sizes']['wcsquare'] ); ?>" alt="<?php echo esc_html( $image['alt'] ); ?>" />
 
 				<?php if ( $link ) : ?>
+					<p><?php echo esc_html( $title ); ?></p>
 					</a>
 				<?php endif; ?>
-
-				<?php echo esc_html( $title ); ?>
 
 			</li>
 

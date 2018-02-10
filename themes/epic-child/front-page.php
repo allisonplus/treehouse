@@ -14,7 +14,7 @@ get_header(); ?>
 
 		<section class="child-custom content-wrapper front-page-content front-page cf">
 
-			<?php echo treehouse_homepage_focus(); ?>
+			<?php echo treehouse_homepage_focus(); // WPCS: XSS ok. ?>
 
 			<article class="content">
 				<?php echo treehouse_supplementary_section(); // WPCS: XSS ok. ?>

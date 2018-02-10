@@ -21,7 +21,7 @@
 }
 
 html,body, div, dl, dt, dd, ul, li, pre, form, fieldset, input, textarea, blockquote, th, td, section {
-	font-size: 14px;
+	font-size: 17px;
 }
 
 $aqua: #00EEEE;
@@ -106,25 +106,26 @@ nav .primary-nav {
 	border-bottom: none;
 	border-top: none;
 	color: $white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
 	margin-top: 0;
 
-	@media only screen and (min-width : 760px) {
+	@media only screen and (min-width: 641px) {
+		flex-direction: row;
 		margin-bottom: 30px;
 	}
 
 	li {
 		font-family: "Open Sans", sans-serif;
 
-		&:not(:last-of-type) {
-			margin-right: 16px;
-		}
-
 		a {
 			color: $white;
+			font-size: 18px;
 			padding: 8px 25px;
 			width: initial;
 
-			@media only screen and (min-width: 640px) {
+			@media only screen and (min-width: 641px) {
 				color: $deep-aqua;
 			}
 		}
@@ -235,6 +236,13 @@ a#cancel-comment-reply-link,
 	}
 }
 
+.single-portfolio {
+	article.content a.button,
+	article.full-width-content a.button {
+		color: $white;
+	}
+}
+
 p.latest-post-date {
 	color: #bbbbbb;
 }
@@ -289,7 +297,8 @@ header nav {
 	margin-bottom: 0;
 }
 
-article.content ul li, article.full-width-content ul li,
+article.content ul li,
+article.full-width-content ul li,
 .child-custom article.content ul > li {
 	list-style-type: none;
 }
@@ -300,8 +309,8 @@ article.content ul li, article.full-width-content ul li,
 }
 
 .homepage-focus-img {
-	background-position: cover;
-	background-repeat: no-repeat;
+	margin: 0 auto;
+	text-align: center;
 }
 
 // Portfolio Pieces.
@@ -316,9 +325,11 @@ article.content ul li, article.full-width-content ul li,
 .front-page-content .content,
 .single-portfolio .content {
 	border-right: none;
+	padding: 0;
 	width: 100%;
 }
 
+// Single Portfolio Item.
 .single-portfolio {
 
 	.content {
@@ -330,9 +341,12 @@ article.content ul li, article.full-width-content ul li,
 		justify-content: space-between;
 	}
 
-	.content-wrap,
 	.content-img-wrap {
 		max-width: 50%;
+	}
+
+	.content-wrap {
+		flex-basis: 50%;
 	}
 
 	.content-img-wrap {
@@ -352,13 +366,15 @@ article.content ul li, article.full-width-content ul li,
 
 // Homepage : Supplementary Section.
 .supplementary-gallery {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	margin: 60px 0 30px;
+	align-content: center;
+	display: grid;
+	grid-gap: 15px;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	justify-content: center;
+	margin-top: 24px;
 
 	li {
-		flex-basis: 200px;
 		text-align: center;
 	}
 
@@ -366,6 +382,27 @@ article.content ul li, article.full-width-content ul li,
 		a {
 			display: block;
 		}
+	}
+}
+
+// Two columns.
+@element ".supplementary-gallery" and (min-children: 2) {
+	:self {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+// Three items.
+@element ".supplementary-gallery" and (min-children: 3) {
+	:self {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+// Four items.
+@element ".supplementary-gallery" and (min-children: 4) {
+	:self {
+		grid-template-columns: repeat(4, 1fr);
 	}
 }
 

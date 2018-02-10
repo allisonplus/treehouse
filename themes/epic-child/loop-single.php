@@ -15,11 +15,13 @@ if ( have_posts() ) :
 
 		<div class="content-img-wrap">
 
-		<?php the_post_thumbnail( 'portfolio-archive' ); ?>
+		<?php the_post_thumbnail( 'portfolio-single' ); ?>
 
 		<?php
 			$images = get_field( 'portfolio_images' );
-			$size = 'portfolio-archive'; // (thumbnail, medium, large, full or custom size)
+			$size = 'portfolio-single'; // (thumbnail, medium, large, full or custom size)
+			$pub_link = get_field( 'link_to_publication' );
+			$etsy_link = get_field( 'etsy_link' );
 		?>
 
 		<?php if ( $images ) : ?>
@@ -38,6 +40,14 @@ if ( have_posts() ) :
 				<h1 class="post-title page-title"><?php the_title(); ?></h1>
 			</div>
 			<?php the_content(); ?>
+
+			<?php if ( $etsy_link ) : ?>
+				<a class="button" href="<?php echo esc_url( $etsy_link ); ?>"><?php esc_html_e( 'Etsy Listing', 'epic-child' ); ?></a>
+			<?php endif; ?>
+
+			<?php if ( $pub_link ) : ?>
+				<a class="button" href="<?php echo esc_url( $pub_link ); ?>"><?php esc_html_e( 'Client Link', 'epic-child' ); ?></a>
+			<?php endif; ?>
 		</div>
 	</section>
 
