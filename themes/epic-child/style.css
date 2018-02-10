@@ -266,6 +266,7 @@ article.full-width-content ul li,
   display: inline-block;
   float: none; }
 
+.page .content,
 .front-page-content .content,
 .single-portfolio .content {
   border-right: none;
