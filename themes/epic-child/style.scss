@@ -419,42 +419,38 @@ article.full-width-content ul li,
 	.content {
 		display: grid;
 		grid-gap: 16px;
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: 1fr;
+		margin-top: 32px;
+
+		@media (min-width: 500px) {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@media (min-width: 760px) {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
 	}
 
 	.portfolio-single {
 		font-size: 0;
-		position: relative;
-		text-align: center;
-
-		&:hover {
-
-			.latest-post-title {
-				opacity: 0.5;
-			}
-		} // &:hover
 
 		.latest-post-title {
-			align-items: center;
-			background-color: #00a8f0;
-			bottom: 0;
-			color: $white;
-			display: flex;
 			font-size: 20px;
-			justify-content: center;
-			left: 0;
-			margin: 0;
-			opacity: 0;
-			position: absolute;
-			right: 0;
-			top: 0;
-			transition: opacity 0.25s ease-in-out;
+			margin: 16px 0;
+			text-align: center;
 		}
 	} // .portfolio-single
 
 	.portfolio-single-link {
+		color: $deep-aqua;
 		display: block;
 		font-size: 0;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+			text-decoration-color: $deep-aqua;
+		}
 	}
 
 	.wp-post-image {

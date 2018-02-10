@@ -327,33 +327,30 @@ article.full-width-content ul li,
 .post-type-archive-portfolio .content {
   display: grid;
   grid-gap: 16px;
-  grid-template-columns: 1fr 1fr 1fr; }
+  grid-template-columns: 1fr;
+  margin-top: 32px; }
+  @media (min-width: 500px) {
+    .post-type-archive-portfolio .content {
+      grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 760px) {
+    .post-type-archive-portfolio .content {
+      grid-template-columns: 1fr 1fr 1fr; } }
 
 .post-type-archive-portfolio .portfolio-single {
-  font-size: 0;
-  position: relative;
-  text-align: center; }
-  .post-type-archive-portfolio .portfolio-single:hover .latest-post-title {
-    opacity: 0.5; }
+  font-size: 0; }
   .post-type-archive-portfolio .portfolio-single .latest-post-title {
-    align-items: center;
-    background-color: #00a8f0;
-    bottom: 0;
-    color: #fff;
-    display: flex;
     font-size: 20px;
-    justify-content: center;
-    left: 0;
-    margin: 0;
-    opacity: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transition: opacity 0.25s ease-in-out; }
+    margin: 16px 0;
+    text-align: center; }
 
 .post-type-archive-portfolio .portfolio-single-link {
+  color: #009999;
   display: block;
-  font-size: 0; }
+  font-size: 0;
+  text-decoration: none; }
+  .post-type-archive-portfolio .portfolio-single-link:hover {
+    text-decoration: underline;
+    text-decoration-color: #009999; }
 
 .post-type-archive-portfolio .wp-post-image {
   margin-bottom: 0; }
