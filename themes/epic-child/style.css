@@ -307,7 +307,10 @@ article.full-width-content ul li,
   .supplementary-gallery li {
     text-align: center; }
   .supplementary-gallery .supplementary-single a {
-    display: block; }
+    display: block;
+    text-decoration: none; }
+    .supplementary-gallery .supplementary-single a:hover {
+      font-weight: 800; }
 
 @element ".supplementary-gallery" and (min-children: 2) {
   :self {

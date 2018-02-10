@@ -382,6 +382,11 @@ article.full-width-content ul li,
 	.supplementary-single {
 		a {
 			display: block;
+			text-decoration: none;
+
+			&:hover {
+				font-weight: 800;
+			}
 		}
 	}
 }
