@@ -295,7 +295,7 @@ article.full-width-content ul li,
   box-shadow: none;
   margin-top: 0; }
 
-.supplementary-gallery {
+ul.supplementary-gallery {
   align-content: center;
   display: grid;
   grid-gap: 15px;
@@ -303,9 +303,9 @@ article.full-width-content ul li,
   grid-template-rows: 1fr;
   justify-content: center;
   margin-top: 24px; }
-  .supplementary-gallery li {
+  ul.supplementary-gallery li {
     text-align: center; }
-  .supplementary-gallery .supplementary-single a {
+  ul.supplementary-gallery .supplementary-single a {
     display: block; }
 
 @element ".supplementary-gallery" and (min-children: 2) {
