@@ -14,7 +14,7 @@ if ( have_posts() ) :
 ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class( 'portfolio-single' ); ?>>
 		<a class="portfolio-single-link" href="<?php esc_url( the_permalink() ); ?>">
-			<?php the_post_thumbnail( 'portfolio-archive' ); ?>
+			<?php the_post_thumbnail( 'wcsquare' ); ?>
 			<h2 class="latest-post-title"><?php the_title(); ?></h2>
 		</a>
 	</article>
