@@ -62,9 +62,6 @@ if ( ! function_exists( 'sds_single_port_navigation' ) ) {
 
 /**
  * This function adds settings, sections, and controls to the Theme Customizer.
- *
- * Each theme handles the output of the styles in the wp_head action (usually in functions.php).
- * Each theme also handles filters in their respected Class Files (/includes/ThemeName.php).
  */
 add_action( 'customize_register', 'sds_customizer_additional', 20 );
 

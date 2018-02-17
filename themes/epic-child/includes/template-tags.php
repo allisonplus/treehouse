@@ -11,6 +11,7 @@
 function treehouse_homepage_heroine() {
 
 	$image = get_field( 'main_image' );
+	$img_link = get_field( 'image_link' );
 
 	// Stop if there's nothing to display.
 	if ( ! $image ) {
@@ -24,7 +25,7 @@ function treehouse_homepage_heroine() {
 	ob_start(); ?>
 
 	<section class="homepage-focus-img">
-		<a href="<?php echo esc_url( $image['url'] ); ?>">
+		<a target="<?php echo esc_url( $img_link['target'] ); ?>" href="<?php echo esc_url( $img_link['url'] ); ?>">
 			<img src="<?php echo esc_url( $image['sizes']['homepage-heroine'] ); ?>" alt="<?php echo esc_html( $img_alt ); ?>" />
 		</a>
 	</section><!--.homepage-focus-img-->
