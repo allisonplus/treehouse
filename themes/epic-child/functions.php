@@ -9,7 +9,7 @@
  */
 
 // Include file to bring in ACF related content.
-require_once( dirname( __FILE__ ) . '/includes/acf.php' );
+require_once( dirname( __FILE__ ) . '/includes/template-tags.php' );
 
 add_action( 'after_setup_theme', 'sds_child_image_size', 11 );
 /**
@@ -17,8 +17,7 @@ add_action( 'after_setup_theme', 'sds_child_image_size', 11 );
  */
 function sds_child_image_size() {
 	add_image_size( 'homepage-heroine', 1200, 550, false );
-	add_image_size( 'portfolio-archive', 388, 225, array( 'center', 'center' ), true );
-	add_image_size( 'portfolio-single', 550, 550, false );
+	add_image_size( 'portfolio-single', 750, 750, false );
 }
 
 add_action( 'wp_enqueue_scripts', 'sds_enqueue_styles' );
