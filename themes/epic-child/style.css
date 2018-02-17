@@ -165,6 +165,10 @@ h1.page-title {
   font-size: 32px;
   text-decoration: none; }
 
+.page-template-page-landing-page .latest-post-title,
+.page-template-page-landing-page .latest-post-date {
+  display: none; }
+
 section.latest-post {
   width: 95%; }
 

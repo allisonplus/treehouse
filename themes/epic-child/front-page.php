@@ -15,7 +15,8 @@ get_header(); ?>
 		<section class="child-custom content-wrapper front-page-content front-page cf">
 			<?php
 				echo treehouse_homepage_heroine(); // WPCS: XSS ok.
-				the_content();
+				echo the_content();
+				get_template_part( 'loop', 'home' ); // Loop - Home
 			?>
 		</section>
 	</main>

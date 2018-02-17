@@ -203,6 +203,15 @@ h1.page-title {
 	text-decoration: none;
 }
 
+// Homepage.
+.page-template-page-landing-page {
+	.latest-post-title,
+	.latest-post-date {
+		display: none;
+	}
+
+}
+
 // Blog.
 section.latest-post {
 	width: 95%;
