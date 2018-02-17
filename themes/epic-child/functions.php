@@ -37,3 +37,87 @@ function sds_scripts() {
 	wp_enqueue_script( 'sds-eqcss', get_stylesheet_directory_uri() . '/assets/eqcss.js', array(), '20171215', true );
 }
 add_action( 'wp_enqueue_scripts', 'sds_scripts' );
+
+/**
+ * This function outputs next/prev navigation on single portfolio item.
+ */
+if ( ! function_exists( 'sds_single_port_navigation' ) ) {
+	function sds_single_port_navigation() {
+	?>
+		<section class="single-post-navigation post-navigation">
+			<section class="previous-posts">
+				<?php next_post_link( '%link', '&lt; Next Project ' ); ?>
+			</section>
+			<section class="next-posts">
+				<?php previous_post_link( '%link', 'Previous Project &gt;' ); ?>
+			</section>
+		</section>
+	<?php
+	}
+}
+
+/********************
+ * Theme Customizer *
+ ********************/
+
+/**
+ * This function adds settings, sections, and controls to the Theme Customizer.
+ *
+ * Each theme handles the output of the styles in the wp_head action (usually in functions.php).
+ * Each theme also handles filters in their respected Class Files (/includes/ThemeName.php).
+ */
+add_action( 'customize_register', 'sds_customizer_additional', 20 );
+
+function sds_customizer_additional( $wp_customize ) {
+
+	// Add our social link options.
+	$wp_customize->add_section(
+		'sds_social_links_section',
+		array(
+			'title'       => esc_html__( 'Social Links', 'sds' ),
+			'description' => esc_html__( 'These are the settings for social links.', 'sds' ),
+			'priority'    => 90,
+		)
+	);
+
+	// Add our Contact Email field.
+	$wp_customize->add_setting(
+		'sds_email_link',
+		array(
+			'default' => '',
+		)
+	);
+	$wp_customize->add_control(
+		'sds_email_link',
+		array(
+			'label'       => esc_html__( 'Email', 'sds' ),
+			'section'     => 'sds_social_links_section',
+			'type'        => 'email',
+			// 'sanitize'    => 'html',
+		)
+	);
+
+	// Create an array of our social links for ease of setup.
+	$social_networks = array( 'pinterest', 'tumblr', 'facebook', 'instagram' );
+
+	// Loop through our networks to setup our fields.
+	foreach ( $social_networks as $network ) {
+
+		$wp_customize->add_setting(
+			'sds_' . $network . '_link',
+			array(
+				'default' => '',
+				// 'sanitize_callback' => 'sds_sanitize_customizer_url',
+			)
+		);
+		$wp_customize->add_control(
+			'sds_' . $network . '_link',
+			array(
+				'label'   => sprintf( esc_html__( '%s Link', 'sds' ), ucwords( $network ) ),
+				'section' => 'sds_social_links_section',
+				'type'    => 'text',
+			)
+		);
+	}
+
+}

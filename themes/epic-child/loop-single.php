@@ -58,7 +58,9 @@ if ( have_posts() ) :
 			</div>
 		<?php endif ?>
 
-		<?php sds_single_post_navigation(); ?>
+		<?php sds_single_port_navigation(); ?>
+
+		<!-- <?php sds_single_post_navigation(); ?> -->
 	</footer>
 <?php
 		endwhile;
