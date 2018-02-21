@@ -133,7 +133,6 @@ h1.page-title {
 	.latest-post-date {
 		display: none;
 	}
-
 }
 
 // Blog.
@@ -234,10 +233,6 @@ article.full-width-content ul li,
 	margin-top: 0;
 	padding: 0;
 	width: 100%;
-
-	@include media($tablet-portrait, null) {
-		margin-top: 50px;
-	}
 }
 
 

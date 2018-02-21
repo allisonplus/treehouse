@@ -397,11 +397,6 @@ article.full-width-content ul li,
   margin-top: 0;
   padding: 0;
   width: 100%; }
-  @media only screen and (min-width: 768px) {
-    .page .content,
-    .front-page-content .content,
-    .single-portfolio .content {
-      margin-top: 50px; } }
 
 .screen-reader-text {
   border: 0;
