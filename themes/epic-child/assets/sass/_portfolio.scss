@@ -14,6 +14,7 @@
 		padding: 0;
 	}
 
+	// Around all the portfolio content.
 	.type-portfolio {
 		display: flex;
 		flex-direction: column-reverse;
@@ -25,15 +26,23 @@
 		}
 	}
 
+	// Wrapper around <img>
 	.content-img-wrap {
 		margin-top: 24px;
+		width: 100%;
 
 		@include media($tablet-landscape, null) {
 			margin-top: 0;
 			max-width: 66%;
 		}
+
+		ul {
+			margin: 0;
+			padding: 0;
+		}
 	}
 
+	// Wrapper around content.
 	.content-wrap {
 		flex-basis: 33%;
 
@@ -46,23 +55,16 @@
 		}
 	}
 
-	.content-img-wrap {
-		width: 100%;
-
-		ul {
-			margin: 0;
-			padding: 0;
-		}
-	}
-
 	.post-image img {
 		box-shadow: none;
 		margin-top: 0;
 	}
 }
 
+// Single portfolio page.
 .single-portfolio {
 
+	// Prev/Next Project navigation links.
 	.post-navigation .next-posts,
 	.post-navigation .previous-posts {
 		width: auto;
@@ -71,9 +73,6 @@
 	.post-navigation {
 		display: flex;
 		justify-content: space-between;
-	}
-
-	.single-post-navigation .post-navigation {
 		overflow: hidden;
 	}
 
@@ -109,6 +108,7 @@
 		}
 	}
 
+	// Individual portfolio listing.
 	.portfolio-single {
 		font-size: 0;
 		text-align: center;
@@ -121,6 +121,7 @@
 		}
 	} // .portfolio-single
 
+	// Link around single portfolio listing.
 	.portfolio-single-link {
 		display: block;
 		text-decoration: none;

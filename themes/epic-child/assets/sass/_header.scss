@@ -27,33 +27,50 @@ nav ul.top-nav {
 	}
 }
 
+// Adjust mobile button link styling.
+.primary-nav-container {
+	.primary-nav-button {
+		background-color: transparent;
+		color: $deep-aqua;
+	}
+}
+
+// When the menu is open.
+nav .primary-nav.open {
+	height: auto;
+	overflow: hidden;
+	padding-top: 162px;
+	height: 412px;
+}
+
+// Primary Nav.
 nav .primary-nav {
 	border-bottom: none;
 	border-top: none;
 	color: $white;
 	display: flex;
+	flex: 0;
 	flex-direction: column;
-	justify-content: space-evenly;
+	height: 0;
+	justify-content: flex-start;
 	margin-top: 0;
 
 	@media only screen and (min-width: 641px) {
 		flex-direction: row;
+		justify-content: space-evenly;
 		margin-bottom: 5px;
 		margin-top: 24px;
 	}
 
 	li {
+		background-color: $white;
 		font-family: "Open Sans", sans-serif;
 
 		a {
-			color: $white;
+			color: $deep-aqua;
 			font-size: 18px;
 			padding: 8px 20px;
 			width: initial;
-
-			@media only screen and (min-width: 641px) {
-				color: $deep-aqua;
-			}
 
 			@include media($tablet-landscape, null) {
 				padding: 8px 25px;

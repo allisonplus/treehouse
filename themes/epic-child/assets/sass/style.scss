@@ -24,10 +24,10 @@ html,body, div, dl, dt, dd, ul, li, pre, form, fieldset, input, textarea, blockq
 	font-size: 17px;
 }
 
-@import 'variables';
-@import 'header';
-@import 'portfolio';
-@import 'footer';
+@import "variables";
+@import "header";
+@import "portfolio";
+@import "footer";
 
 a:hover {
 	color: $aqua;
@@ -72,11 +72,6 @@ p {
 	color: $white;
 }
 
-// article.content {
-// 	padding-left: 1.5%;
-// 	width: 60%;
-// }
-
 h1 {
 	color: $grey;
 	font-weight: 200;
@@ -93,6 +88,13 @@ article.full-width-content h4,
 article.content h5,
 article.full-width-content h5 {
 	color: $aqua;
+}
+
+// TItle.
+article.content h1.page-title {
+	background-color: transparent;
+	color: $soft-black;
+	margin-top: 0;
 }
 
 article.content blockquote,
@@ -172,6 +174,7 @@ p.latest-post-date {
 	color: #bbbbbb;
 }
 
+
 section.latest-post h2.latest-post-title {
 	color: $deep-aqua;
 }
@@ -228,8 +231,13 @@ article.full-width-content ul li,
 .front-page-content .content,
 .single-portfolio .content {
 	border-right: none;
+	margin-top: 0;
 	padding: 0;
 	width: 100%;
+
+	@include media($tablet-portrait, null) {
+		margin-top: 50px;
+	}
 }
 
 
