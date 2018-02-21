@@ -230,9 +230,19 @@ article.full-width-content ul li,
 .front-page-content .content,
 .single-portfolio .content {
 	border-right: none;
-	margin-top: 0;
 	padding: 0;
 	width: 100%;
+}
+
+.page .content {
+	// margin-top: 35px;
+
+	@media only screen and (min-width: 641px) {
+		// flex-direction: row;
+		// justify-content: space-evenly;
+		// margin-bottom: 5px;
+		margin-top: 35px;
+	}
 }
 
 
