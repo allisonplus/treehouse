@@ -50,7 +50,8 @@ nav ul.top-nav {
 
 .primary-nav-container .primary-nav-button {
   background-color: transparent;
-  color: #009999; }
+  color: #009999;
+  margin: 1em 0; }
 
 nav .primary-nav.open {
   height: auto;
