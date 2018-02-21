@@ -1,0 +1,85 @@
+section.logo-box {
+	padding: 0;
+}
+
+header #title a {
+	display: block;
+}
+
+header h1 a,
+header .header-call-to-action .widget a {
+	color: $deep-aqua;
+}
+
+header .header-call-to-action .widget {
+	background-color: $deep-aqua;
+}
+
+header .header-call-to-action .widget_search {
+	color: #00cccc;
+}
+
+nav ul.top-nav {
+	border-bottom: 1px solid $grey;
+
+	li a {
+		color: $grey;
+	}
+}
+
+nav .primary-nav {
+	border-bottom: none;
+	border-top: none;
+	color: $white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	margin-top: 0;
+
+	@media only screen and (min-width: 641px) {
+		flex-direction: row;
+		margin-bottom: 5px;
+		margin-top: 24px;
+	}
+
+	li {
+		font-family: "Open Sans", sans-serif;
+
+		a {
+			color: $white;
+			font-size: 18px;
+			padding: 8px 20px;
+			width: initial;
+
+			@media only screen and (min-width: 641px) {
+				color: $deep-aqua;
+			}
+
+			@include media($tablet-landscape, null) {
+				padding: 8px 25px;
+			}
+		}
+
+		a:hover {
+			background-color: $aqua;
+		}
+	}
+} // nav .primary-nav
+
+// Primary Navigation.
+.primary-nav {
+	padding-left: 0;
+}
+
+nav .primary-nav li ul.sub-menu li a:hover,
+.primary-nav-container li ul.children li a:hover {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+	color: $grey;
+	display: block;
+	float: none;
+	margin-bottom: -1px;
+	min-width: 12em;
+	padding: 15px 25px;
+	white-space: nowrap;
+	width: auto;
+}

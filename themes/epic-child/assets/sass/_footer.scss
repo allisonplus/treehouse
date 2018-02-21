@@ -1,0 +1,44 @@
+footer#footer {
+	border: none;
+	text-align: center;
+}
+
+// Social icons in footer.
+.social-networks {
+	display: flex;
+	justify-content: center;
+	margin: 24px auto 0;
+	max-width: 50%;
+
+	.social-network {
+
+		@include media($tablet-portrait, null) {
+			height: 75px;
+			width: 75px;
+		}
+
+		&:not(:last-of-type) {
+			margin-right: 16px;
+		}
+
+		a {
+			display: block;
+		}
+	}
+}
+
+// Footer.
+.copyright {
+	background-color: transparent;;
+	color: $black;
+	display: block;
+	font-size: 9px;
+
+	a {
+		color: $soft-black;
+	}
+
+	.slocum-credit {
+		display: block;
+	}
+} // .copyright

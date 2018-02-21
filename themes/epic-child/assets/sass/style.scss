@@ -24,11 +24,10 @@ html,body, div, dl, dt, dd, ul, li, pre, form, fieldset, input, textarea, blockq
 	font-size: 17px;
 }
 
-$aqua: #00EEEE;
-$deep-aqua: #009999;
-$grey: #555;
-$black: #000;
-$white: #fff;
+@import 'variables';
+@import 'header';
+@import 'portfolio';
+@import 'footer';
 
 a:hover {
 	color: $aqua;
@@ -67,93 +66,16 @@ p {
 	display: block;
 }
 
-section.logo-box {
-	padding: 0;
-}
-
-header #title a {
-	display: block;
-}
-
-header h1 a,
-header .header-call-to-action .widget a {
-	color: $deep-aqua;
-}
-
-header .header-call-to-action .widget {
-	background-color: $deep-aqua;
-}
-
-header .header-call-to-action .widget_search {
-	color: #00cccc;
-}
-
-nav ul.top-nav {
-	border-bottom: 1px solid $grey;
-
-	li a {
-		color: $grey;
-	}
-}
-
 #searchform input {
 	background-color: $white;
 	border-color: $grey;
 	color: $white;
 }
 
-nav .primary-nav {
-	border-bottom: none;
-	border-top: none;
-	color: $white;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-	margin-top: 0;
-
-	@media only screen and (min-width: 641px) {
-		flex-direction: row;
-		margin-bottom: 5px;
-		margin-top: 24px;
-	}
-
-	li {
-		font-family: "Open Sans", sans-serif;
-
-		a {
-			color: $white;
-			font-size: 18px;
-			padding: 8px 25px;
-			width: initial;
-
-			@media only screen and (min-width: 641px) {
-				color: $deep-aqua;
-			}
-		}
-
-		a:hover {
-			background-color: $aqua;
-		}
-	}
-} // nav .primary-nav
-
-nav .primary-nav li ul.sub-menu li a:hover,
-.primary-nav-container li ul.children li a:hover {
-	border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-	color: $grey;
-	display: block;
-	float: none;
-	margin-bottom: -1px;
-	min-width: 12em;
-	padding: 15px 25px;
-	white-space: nowrap;
-	width: auto;
-}
-
-article.content {
-	padding-left: 1.5%;
-	width: 60%;
-}
+// article.content {
+// 	padding-left: 1.5%;
+// 	width: 60%;
+// }
 
 h1 {
 	color: $grey;
@@ -246,13 +168,6 @@ a#cancel-comment-reply-link,
 	}
 }
 
-.single-portfolio {
-	article.content a.button,
-	article.full-width-content a.button {
-		color: $white;
-	}
-}
-
 p.latest-post-date {
 	color: #bbbbbb;
 }
@@ -276,15 +191,6 @@ section.latest-post h2 a:hover {
 // Sidebar
 aside.sidebar {
 	width: 30%;
-}
-
-// Footer.
-.copyright {
-	font-size: 9px;
-
-	a {
-		color: #bab9b9;
-	}
 }
 
 .mc-gravity-confirmation, .mc_gravity-confirmation, .mc-newsletter-confirmation, .mc_newsletter-confirmation {
@@ -313,24 +219,10 @@ article.full-width-content ul li,
 	list-style-type: none;
 }
 
-// Primary Navigation.
-.primary-nav {
-	padding-left: 0;
-}
-
 .homepage-focus-img {
 	margin: 0 auto;
 	text-align: center;
 }
-
-// Portfolio Pieces.
-.portfolio-pieces {
-
-	li {
-		display: inline-block;
-		float: none;
-	} // li
-} // .portfolio-pieces
 
 .page .content,
 .front-page-content .content,
@@ -339,87 +231,6 @@ article.full-width-content ul li,
 	padding: 0;
 	width: 100%;
 }
-
-// Single Portfolio Item.
-.single-portfolio {
-
-	.content {
-		padding: 0;
-	}
-
-	.type-portfolio {
-		display: flex;
-		justify-content: space-between;
-		margin-top: 30px;
-	}
-
-	.content-img-wrap {
-		max-width: 66%;
-	}
-
-	.content-wrap {
-		flex-basis: 33%;
-	}
-
-	.content-img-wrap {
-		width: 100%;
-
-		ul {
-			margin: 0;
-			padding: 0;
-		}
-	}
-
-	.post-image img {
-		box-shadow: none;
-		margin-top: 0;
-	}
-}
-
-// Portfolio Archive Page
-.post-type-archive-portfolio {
-
-	// Make it full width (nix sidebar).
-	.content {
-		display: grid;
-		grid-gap: 10px;
-		grid-template-columns: 1fr;
-		max-width: 1060px;
-		margin: 32px auto 0;
-
-		@media (min-width: 500px) {
-			grid-template-columns: 1fr 1fr;
-		}
-
-		@media (min-width: 760px) {
-			grid-template-columns: 1fr 1fr 1fr;
-		}
-	}
-
-	.portfolio-single {
-		font-size: 0;
-		text-align: center;
-
-		.latest-post-title {
-			font-size: 20px;
-			margin: 16px 0;
-			text-align: center;
-		}
-	} // .portfolio-single
-
-	.portfolio-single-link {
-		display: block;
-		text-decoration: none;
-
-		&:hover {
-			color: #222;
-		}
-	}
-
-	.wp-post-image {
-		margin-bottom: 0;
-	}
-} // .post-type-archive-portfolio
 
 
 // Text meant only for screen readers.
@@ -451,30 +262,4 @@ article.full-width-content ul li,
 	top: 5px;
 	width: auto;
 	z-index: 100000;
-}
-
-footer#footer {
-	border: none;
-	text-align: center;
-}
-
-// Social icons in footer.
-.social-networks {
-	display: flex;
-	justify-content: center;
-	margin: 24px auto 0;
-	max-width: 50%;
-
-	.social-network {
-		height: 75px;
-		width: 75px;
-
-		&:not(:last-of-type) {
-			margin-right: 16px;
-		}
-
-		a {
-			display: block;
-		}
-	}
 }

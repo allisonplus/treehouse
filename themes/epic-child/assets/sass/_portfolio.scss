@@ -1,0 +1,136 @@
+// Portfolio Pieces.
+.portfolio-pieces {
+
+	li {
+		display: inline-block;
+		float: none;
+	} // li
+} // .portfolio-pieces
+
+// Single Portfolio Item.
+.single-portfolio {
+
+	.content {
+		padding: 0;
+	}
+
+	.type-portfolio {
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: space-between;
+
+		@include media($tablet-landscape, null) {
+			flex-direction: row;
+			margin-top: 30px;
+		}
+	}
+
+	.content-img-wrap {
+		margin-top: 24px;
+
+		@include media($tablet-landscape, null) {
+			margin-top: 0;
+			max-width: 66%;
+		}
+	}
+
+	.content-wrap {
+		flex-basis: 33%;
+
+		@include media($phone-landscape, null) {
+			margin-top: 30px;
+		}
+
+		@include media($tablet-landscape, null) {
+			margin-top: 0;
+		}
+	}
+
+	.content-img-wrap {
+		width: 100%;
+
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	.post-image img {
+		box-shadow: none;
+		margin-top: 0;
+	}
+}
+
+.single-portfolio {
+
+	.post-navigation .next-posts,
+	.post-navigation .previous-posts {
+		width: auto;
+	}
+
+	.post-navigation {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.single-post-navigation .post-navigation {
+		overflow: hidden;
+	}
+
+	article.content .previous-posts a,
+	article.content .next-posts a {
+		padding: 10px;
+		width: auto;
+	}
+
+	article.content a.button,
+	article.full-width-content a.button {
+		color: $white;
+	}
+}
+
+// Portfolio Archive Page
+.post-type-archive-portfolio {
+
+	// Make it full width (nix sidebar).
+	.content {
+		display: grid;
+		grid-gap: 10px;
+		grid-template-columns: 1fr;
+		margin: 32px auto 0;
+		max-width: 1060px;
+
+		@media (min-width: 500px) {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@media (min-width: 760px) {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+	}
+
+	.portfolio-single {
+		font-size: 0;
+		text-align: center;
+
+		.latest-post-title {
+			font-size: 20px;
+			font-weight: 400;
+			margin: 16px 0;
+			text-align: center;
+		}
+	} // .portfolio-single
+
+	.portfolio-single-link {
+		display: block;
+		text-decoration: none;
+
+		&:hover {
+			color: #222;
+		}
+	}
+
+	.wp-post-image {
+		margin-bottom: 0;
+	}
+} // .post-type-archive-portfolio
