@@ -415,15 +415,21 @@ article.full-width-content ul li,
   @media only screen and (min-width: 641px) {
     .page-about .latest-post {
       max-width: 60%; } }
-  @media only screen and (min-width: 720px) {
+  @media only screen and (min-width: 1000px) {
     .page-about .latest-post {
       max-width: 66%; } }
 
 .page-about .img-wrapper {
+  font-size: 0;
   padding: 1% 0 1%; }
   @media only screen and (min-width: 641px) {
     .page-about .img-wrapper {
+      max-width: 30%; } }
+  @media only screen and (min-width: 1000px) {
+    .page-about .img-wrapper {
       max-width: 33%; } }
+  .page-about .img-wrapper img {
+    margin: 0; }
 
 .screen-reader-text {
   border: 0;
