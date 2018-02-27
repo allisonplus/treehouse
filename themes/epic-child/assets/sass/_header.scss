@@ -1,4 +1,5 @@
 section.logo-box {
+	margin-bottom: 20px;
 	padding: 0;
 }
 
@@ -58,8 +59,9 @@ nav .primary-nav {
 
 	@media only screen and (min-width: 641px) {
 		flex-direction: row;
+		height: initial;
 		justify-content: space-evenly;
-		margin-top: 24px;
+		margin: 0 0 32px;
 	}
 
 	li {
