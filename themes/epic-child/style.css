@@ -28,6 +28,7 @@ html, body, div, dl, dt, dd, ul, li, pre, form, fieldset, input, textarea, block
   font-size: 17px; }
 
 section.logo-box {
+  margin-bottom: 20px;
   padding: 0; }
 
 header #title a {
@@ -72,8 +73,9 @@ nav .primary-nav {
   @media only screen and (min-width: 641px) {
     nav .primary-nav {
       flex-direction: row;
+      height: initial;
       justify-content: space-evenly;
-      margin-top: 24px; } }
+      margin: 0 0 32px; } }
   nav .primary-nav li {
     background-color: #fff;
     font-family: "Open Sans", sans-serif; }
@@ -176,11 +178,15 @@ nav .primary-nav li ul.sub-menu li a:hover,
 
 .post-type-archive-portfolio .portfolio-single {
   font-size: 0;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 20px; }
+  @media (min-width: 500px) {
+    .post-type-archive-portfolio .portfolio-single {
+      margin-bottom: 34px; } }
   .post-type-archive-portfolio .portfolio-single .latest-post-title {
     font-size: 20px;
     font-weight: 400;
-    margin: 16px 0;
+    margin: 8px 0 0;
     text-align: center; }
 
 .post-type-archive-portfolio .portfolio-single-link {
@@ -223,9 +229,6 @@ footer#footer {
 a:hover {
   color: #00EEEE;
   text-decoration: none; }
-
-p {
-  line-height: 2.2em; }
 
 .cols-1 article.content {
   width: 90%; }
@@ -397,9 +400,30 @@ article.full-width-content ul li,
   padding: 0;
   width: 100%; }
 
-@media only screen and (min-width: 641px) {
-  .page .content {
-    margin-top: 35px; } }
+.page-about .content {
+  align-items: center;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between; }
+  @media only screen and (min-width: 641px) {
+    .page-about .content {
+      align-items: flex-start;
+      flex-direction: row; } }
+
+.page-about .latest-post {
+  width: 100%; }
+  @media only screen and (min-width: 641px) {
+    .page-about .latest-post {
+      max-width: 60%; } }
+  @media only screen and (min-width: 720px) {
+    .page-about .latest-post {
+      max-width: 66%; } }
+
+.page-about .img-wrapper {
+  padding: 1% 0 1%; }
+  @media only screen and (min-width: 641px) {
+    .page-about .img-wrapper {
+      max-width: 33%; } }
 
 .screen-reader-text {
   border: 0;
