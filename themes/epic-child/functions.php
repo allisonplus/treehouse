@@ -41,15 +41,15 @@ add_action( 'wp_enqueue_scripts', 'sds_scripts' );
 /**
  * This function outputs next/prev navigation on single portfolio item.
  */
-if ( ! function_exists( 'sds_single_port_navigation' ) ) {
-	function sds_single_port_navigation() {
+if ( ! function_exists( 'sds_single_post_navigation' ) ) {
+	function sds_single_post_navigation() {
 	?>
 		<section class="single-post-navigation post-navigation">
 			<section class="previous-posts">
-				<?php next_post_link( '%link', '&lt; Next Project ' ); ?>
+				<?php previous_post_link( '%link', '&lt; Previous Project' ); ?>
 			</section>
 			<section class="next-posts">
-				<?php previous_post_link( '%link', 'Previous Project &gt;' ); ?>
+				<?php next_post_link( '%link', 'Next Project &gt;' ); ?>
 			</section>
 		</section>
 	<?php
