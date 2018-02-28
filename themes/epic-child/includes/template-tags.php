@@ -65,7 +65,7 @@ function sds_get_footer_social_links() {
 
 		<?php if ( ! empty( $link_value ) ) : ?>
 		<li class="social-network <?php echo $network; // WPCS: XSS OK. ?>">
-			<a href="<?php echo esc_url( get_theme_mod( 'sds_' . $network . '_link' ) ); ?>">
+			<a target="_blank" href="<?php echo esc_url( get_theme_mod( 'sds_' . $network . '_link' ) ); ?>">
 				<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/social-' . $network . '.jpg' ); ?>" alt="">
 			</a>
 		</li>
