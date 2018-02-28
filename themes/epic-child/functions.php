@@ -29,19 +29,60 @@ function sds_enqueue_styles() {
 }
 
 /**
+ * Register Google font.
+ *
+ * @link http://themeshaper.com/2014/08/13/how-to-add-google-fonts-to-wordpress-themes/
+ */
+function sds_child_font_url() {
+
+	$fonts_url = '';
+
+	/**
+	 * Translators: If there are characters in your language that are not
+	 * supported by the following, translate this to 'off'. Do not translate
+	 * into your own language.
+	 */
+	$work_sans = _x( 'on', 'Work Sans font: on or off', 'sds' );
+
+	if ( 'off' !== $work_sans ) {
+		$font_families = array();
+
+		if ( 'off' !== $work_sans ) {
+			$font_families[] = 'Work Sans:300,400,700';
+		}
+
+		$query_args = array(
+			'family' => urlencode( implode( '|', $font_families ) ),
+		);
+
+		$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
+
+		// <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700" rel="stylesheet">
+	}
+
+	return $fonts_url;
+}
+
+/**
  * Enqueue scripts and styles.
  */
 function sds_scripts() {
 
 	// EQCSS - https://github.com/tomhodgins/element-queries-spec.
-	wp_enqueue_script( 'sds-eqcss', get_stylesheet_directory_uri() . '/assets/eqcss.js', array(), '20171215', true );
+	// wp_enqueue_script( 'sds-eqcss', get_stylesheet_directory_uri() . '/assets/eqcss.js', array(), '20171215', true );
+
+	// Register styles.
+	wp_register_style( 'sds-google-font', sds_child_font_url(), array(), null );
+
+	// Enqueue styles.
+	wp_enqueue_style( 'sds-google-font' );
 }
 add_action( 'wp_enqueue_scripts', 'sds_scripts' );
 
-/**
- * This function outputs next/prev navigation on single portfolio item.
- */
 if ( ! function_exists( 'sds_single_post_navigation' ) ) {
+	/**
+	 * This function outputs next/prev navigation on single portfolio item.
+	 */
 	function sds_single_post_navigation() {
 	?>
 		<section class="single-post-navigation post-navigation">
@@ -56,16 +97,13 @@ if ( ! function_exists( 'sds_single_post_navigation' ) ) {
 	}
 }
 
-/********************
- * Theme Customizer *
- ********************/
+/******************** * Theme Customizer * ********************/
 
-/**
- * This function adds settings, sections, and controls to the Theme Customizer.
- */
 add_action( 'customize_register', 'sds_customizer_additional', 20 );
-
 function sds_customizer_additional( $wp_customize ) {
+	/**
+	 * This function adds settings, sections, and controls to the Theme Customizer.
+	 */
 
 	// Add our social link options.
 	$wp_customize->add_section(

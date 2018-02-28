@@ -14,7 +14,7 @@
 
 .clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
 
-/*Overwrites exisiting theme styles*/
+/*Overwrites existing theme styles*/
 .child-custom article.content ul {
 	margin-left: 0;
 	padding: 0;
@@ -28,6 +28,11 @@ html,body, div, dl, dt, dd, ul, li, pre, form, fieldset, input, textarea, blockq
 @import "header";
 @import "portfolio";
 @import "footer";
+
+body,
+html {
+	font-family: $font-work!important; // overwrites theme settings.
+}
 
 a:hover {
 	color: $aqua;

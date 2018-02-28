@@ -19,7 +19,7 @@
   clear: both;
   height: 0; }
 
-/*Overwrites exisiting theme styles*/
+/*Overwrites existing theme styles*/
 .child-custom article.content ul {
   margin-left: 0;
   padding: 0; }
@@ -77,11 +77,11 @@ nav .primary-nav {
       justify-content: space-evenly;
       margin: 0 0 32px; } }
   nav .primary-nav li {
-    background-color: #fff;
-    font-family: "Open Sans", sans-serif; }
+    background-color: #fff; }
     nav .primary-nav li a {
       color: #009999;
       font-size: 18px;
+      font-weight: 400;
       padding: 8px 20px;
       width: initial; }
       @media only screen and (min-width: 1024px) {
@@ -225,6 +225,10 @@ footer#footer {
     color: #333; }
   .copyright .slocum-credit {
     display: block; }
+
+body,
+html {
+  font-family: "Work Sans", sans-serif !important; }
 
 a:hover {
   color: #00EEEE;
