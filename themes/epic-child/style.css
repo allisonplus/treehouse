@@ -42,7 +42,7 @@ header .header-call-to-action .widget {
   background-color: #009999; }
 
 header .header-call-to-action .widget_search {
-  color: #00cccc; }
+  color: #009999; }
 
 nav ul.top-nav {
   border-bottom: 1px solid #555; }
@@ -88,7 +88,7 @@ nav .primary-nav {
         nav .primary-nav li a {
           padding: 8px 25px; } }
     nav .primary-nav li a:hover {
-      background-color: #00EEEE; }
+      background-color: #00cccc; }
 
 .primary-nav {
   padding-left: 0; }
@@ -231,7 +231,7 @@ html {
   font-family: "Work Sans", sans-serif !important; }
 
 a:hover {
-  color: #00EEEE;
+  color: #00cccc;
   text-decoration: none; }
 
 .cols-1 article.content {
@@ -275,7 +275,7 @@ article.content h4,
 article.full-width-content h4,
 article.content h5,
 article.full-width-content h5 {
-  color: #00EEEE; }
+  color: #009999; }
 
 article.content h1.page-title {
   background-color: transparent;
@@ -354,7 +354,7 @@ a#cancel-comment-reply-link,
   .gform_wrapper .gform_footer input.button:hover,
   .gform_wrapper .gform_footer input[type=submit]:hover,
   .button:hover {
-    background-color: #00EEEE; }
+    background-color: #00cccc; }
 
 p.latest-post-date {
   color: #bbbbbb; }
@@ -382,7 +382,7 @@ aside.sidebar {
     background-size: 200% auto; } }
 
 header li.current-menu-item a {
-  background-color: #00EEEE;
+  background-color: #009999;
   color: #fff; }
 
 header nav {

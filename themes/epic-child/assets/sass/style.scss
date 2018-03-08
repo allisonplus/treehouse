@@ -88,7 +88,7 @@ article.content h4,
 article.full-width-content h4,
 article.content h5,
 article.full-width-content h5 {
-	color: $aqua;
+	color: $deep-aqua;
 }
 
 // TItle.
@@ -208,8 +208,12 @@ aside.sidebar {
 }
 
 header li.current-menu-item a {
-	background-color: $aqua;
+	background-color: $deep-aqua;
 	color: $white;
+}
+
+header li.current-menu-item {
+
 }
 
 header nav {
