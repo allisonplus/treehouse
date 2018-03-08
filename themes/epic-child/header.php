@@ -17,7 +17,7 @@
 			<section class="logo-box">
 				<?php sds_logo(); ?>
 			</section>
-				<button class="primary-nav-button"><?php esc_html_e( '☰ Navigation', 'epic' ); ?></button>
+				<button class="primary-nav-button"><?php esc_html_e( '☰ Menu', 'epic' ); ?></button>
 				<?php
 					wp_nav_menu( array(
 						'theme_location' => 'primary_nav',
