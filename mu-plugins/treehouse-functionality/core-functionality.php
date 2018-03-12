@@ -18,4 +18,4 @@ require_once( BE_DIR . '/advanced-custom-fields-pro/acf.php' ); // Advanced Cust
 
 
 // Hide ACF menu (re: Portfolio content plugin).
-// add_filter( 'acf/settings/show_admin', '__return_false' );
+add_filter( 'acf/settings/show_admin', '__return_false' );
