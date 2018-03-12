@@ -68,9 +68,6 @@ function sds_child_font_url() {
  */
 function sds_scripts() {
 
-	// EQCSS - https://github.com/tomhodgins/element-queries-spec.
-	// wp_enqueue_script( 'sds-eqcss', get_stylesheet_directory_uri() . '/assets/eqcss.js', array(), '20171215', true );
-
 	// Register styles.
 	wp_register_style( 'sds-google-font', sds_child_font_url(), array(), null );
 
