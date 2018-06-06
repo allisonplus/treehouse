@@ -15,21 +15,24 @@ if ( have_posts() ) :
 
 		<div class="content-img-wrap">
 
-		<?php the_post_thumbnail( 'portfolio-single' ); ?>
+		<?php
+		// Show featured image on single portfolio page as well?
+		if ( false == get_field( 'hide_featured_img' ) ) {
+			the_post_thumbnail( 'portfolio-single' );
+		} else { } ?>
 
 		<?php
 			$images = get_field( 'portfolio_images' );
-			$size = 'portfolio-single'; // (thumbnail, medium, large, full or custom size)
 			$pub_link = get_field( 'link_to_publication' );
 			$etsy_link = get_field( 'etsy_link' );
 		?>
 
 		<?php if ( $images ) : ?>
 			<ul>
-				<?php foreach ( $images as $image ) : ?>
-					<li>
-						<?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
-					</li>
+				<?php foreach ( $images as $image ) :
+					// If it's a GIF bring in the full size so animation is retained.
+					$size = ( 'image/gif' == $image['mime_type'] ? 'full' : 'portfolio-single' ); ?>
+					<li><?php echo wp_get_attachment_image( $image['ID'], $size ); ?></li>
 				<?php endforeach; ?>
 			</ul>
 		<?php endif; ?>
