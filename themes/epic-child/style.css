@@ -126,8 +126,9 @@ nav .primary-nav li ul.sub-menu li a:hover,
   width: 100%; }
   @media only screen and (min-width: 1024px) {
     .single-portfolio .content-img-wrap {
-      margin-top: 0;
-      max-width: 66%; } }
+      margin: 0;
+      max-width: 700px;
+      width: 66%; } }
   .single-portfolio .content-img-wrap ul {
     margin: 0;
     padding: 0; }

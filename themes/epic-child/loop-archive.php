@@ -11,10 +11,20 @@
 // Loop through posts.
 if ( have_posts() ) :
 	while ( have_posts() ) : the_post();
+		    $url = wp_get_attachment_url( get_post_thumbnail_id() );
+		    $filetype = wp_check_filetype( $url );
 ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class( 'portfolio-single' ); ?>>
 		<a class="portfolio-single-link" href="<?php esc_url( the_permalink() ); ?>">
-			<?php the_post_thumbnail( 'wcsquare' ); ?>
+			<?php
+			// Bring in the full size to retain animation if it's a GIF.
+			if ( 'gif' == $filetype['ext'] ) {
+				the_post_thumbnail( 'full' );
+			} else {
+				the_post_thumbnail( 'wcsquare' );
+			}
+
+			?>
 			<h2 class="latest-post-title"><?php the_title(); ?></h2>
 		</a>
 	</article>
