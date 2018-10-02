@@ -21,7 +21,7 @@ if ( have_posts() ) :
 			if ( 'gif' == $filetype['ext'] ) {
 				the_post_thumbnail( 'full' );
 			} else {
-				the_post_thumbnail( 'wcsquare' );
+				the_post_thumbnail( 'square-med-crop' );
 			}
 
 			?>
