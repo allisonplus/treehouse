@@ -415,26 +415,8 @@ article.full-width-content ul li,
       align-items: flex-start;
       flex-direction: row; } }
 
-.page-about .latest-post {
-  width: 100%; }
-  @media only screen and (min-width: 641px) {
-    .page-about .latest-post {
-      max-width: 60%; } }
-  @media only screen and (min-width: 1000px) {
-    .page-about .latest-post {
-      max-width: 66%; } }
-
-.page-about .img-wrapper {
-  font-size: 0;
-  padding: 1% 0 1%; }
-  @media only screen and (min-width: 641px) {
-    .page-about .img-wrapper {
-      max-width: 30%; } }
-  @media only screen and (min-width: 1000px) {
-    .page-about .img-wrapper {
-      max-width: 33%; } }
-  .page-about .img-wrapper img {
-    margin: 0; }
+.page-about a img.alignleft {
+  margin: 5px 36px 20px 0; }
 
 .screen-reader-text {
   border: 0;
@@ -463,3 +445,38 @@ article.full-width-content ul li,
   top: 5px;
   width: auto;
   z-index: 100000; }
+
+article.content input[type=text] {
+  display: inline-block;
+  width: 75%; }
+  @media only screen and (min-width: 641px) {
+    article.content input[type=text] {
+      width: 48%; } }
+
+.wpcf7-form {
+  text-align: center; }
+  .wpcf7-form input[type="email"],
+  .wpcf7-form textarea {
+    padding: 1%;
+    width: 75%; }
+    @media only screen and (min-width: 641px) {
+      .wpcf7-form input[type="email"],
+      .wpcf7-form textarea {
+        padding: 1%;
+        width: 48%; } }
+  .wpcf7-form input[type="email"] {
+    border: 1px solid #bbb; }
+  .wpcf7-form input[type="submit"] {
+    background: #009999;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0.5em 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: uppercase;
+    transition: background 0.2s linear; }
+    .wpcf7-form input[type="submit"]:hover, .wpcf7-form input[type="submit"]:focus {
+      background: #00cccc; }

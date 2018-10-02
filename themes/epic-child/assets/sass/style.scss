@@ -285,3 +285,51 @@ article.full-width-content ul li,
 	width: auto;
 	z-index: 100000;
 }
+
+// Contact form.
+article.content input[type=text] {
+	display: inline-block;
+	width: 75%;
+
+	@media only screen and (min-width: 641px) {
+		width: 48%;
+	}
+}
+
+.wpcf7-form {
+	text-align: center;
+
+	input[type="email"],
+	textarea {
+		padding: 1%;
+		width: 75%;
+
+		@media only screen and (min-width: 641px) {
+			padding: 1%;
+			width: 48%;
+		}
+	}
+
+	input[type="email"] {
+		border: 1px solid #bbb;
+	}
+
+	input[type="submit"] {
+		background: $deep-aqua;
+		border: none;
+		color: $white;
+		font-size: 14px;
+		font-weight: 700;
+		margin: 0.5em 0;
+		padding: 10px 20px;
+		text-decoration: none;
+		text-shadow: none;
+		text-transform: uppercase;
+		transition: background 0.2s linear;
+
+		&:hover,
+		&:focus {
+			background: $aqua;
+		}
+	}
+}
