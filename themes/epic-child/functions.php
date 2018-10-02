@@ -17,7 +17,7 @@ add_action( 'after_setup_theme', 'sds_child_image_size', 11 );
  */
 function sds_child_image_size() {
 	add_image_size( 'homepage-heroine', 1200, 550, false );
-	add_image_size( 'portfolio-single', 750, 750, false );
+	add_image_size( 'portfolio-single', 750, false );
 	add_image_size( 'square-med-crop', 300, 300, true );
 }
 
