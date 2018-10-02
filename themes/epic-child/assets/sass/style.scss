@@ -249,33 +249,8 @@ article.full-width-content ul li,
 		}
 	}
 
-	.latest-post {
-		width: 100%;
-
-		@media only screen and (min-width: 641px) {
-			max-width: 60%;
-		}
-
-		@media only screen and (min-width: 1000px) {
-			max-width: 66%;
-		}
-	}
-
-	.img-wrapper {
-		font-size: 0;
-		padding: 1% 0 1%;
-
-		@media only screen and (min-width: 641px) {
-			max-width: 30%;
-		}
-
-		@media only screen and (min-width: 1000px) {
-			max-width: 33%;
-		}
-
-		img {
-			margin: 0;
-		}
+	a img.alignleft {
+		margin: 5px 36px 20px 0;
 	}
 } // .page-about
 

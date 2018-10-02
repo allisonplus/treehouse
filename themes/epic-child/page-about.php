@@ -11,10 +11,6 @@ get_header(); ?>
 			<?php get_template_part( 'yoast', 'breadcrumbs' ); // Yoast Breadcrumbs. ?>
 
 			<?php get_template_part( 'loop', 'about' ); // Loop - Page. ?>
-
-			<div class="img-wrapper">
-			<?php the_post_thumbnail( 'medium' ); ?>
-			</div>
 		</article>
 	</section>
 
