@@ -132,6 +132,8 @@ nav .primary-nav li ul.sub-menu li a:hover,
   .single-portfolio .content-img-wrap ul {
     margin: 0;
     padding: 0; }
+    .single-portfolio .content-img-wrap ul li {
+      margin-bottom: 15px; }
 
 .single-portfolio .content-wrap {
   flex-basis: 33%; }
