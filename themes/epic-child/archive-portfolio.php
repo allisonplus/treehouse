@@ -8,7 +8,6 @@
 get_header(); ?>
 	<section class="clearfix content-wrapper archive-content archives archive-portfolio">
 		<div class="content">
-			<?php get_template_part( 'yoast', 'breadcrumbs' ); // Yoast Breadcrumbs. ?>
 
 			<?php
 				get_template_part( 'loop', 'archive' ); // Loop - Archive.
